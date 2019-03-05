@@ -23,8 +23,9 @@ GameObject:
   - component: {fileID: 114187595120802936}
   - component: {fileID: 61243886014446888}
   - component: {fileID: 114563597500729694}
+  - component: {fileID: 114607517423583352}
   m_Layer: 8
-  m_Name: Protag_BAttack
+  m_Name: Caster_BAttack
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,11 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Affected:
-  - {fileID: 1190746430385126, guid: af1b03d4a632f9d4c821bb212fd2ba7a, type: 2}
-  - {fileID: 1679556530947452, guid: d17301498af031b41a4132026373c19a, type: 2}
-  - {fileID: 1830780803800388, guid: be204f9f297bc534f844569c20627d16, type: 2}
-  - {fileID: 1923741430989960, guid: 1c4cd80b5fcc46d4da5cb347e6718851, type: 2}
-  - {fileID: 1637361646712070, guid: e982932c3ec0a234793d1536cfe3fc5d, type: 2}
+  - {fileID: 1320182155350068, guid: c76c115611f974a4b91d34d0c19e5620, type: 2}
   Effects:
   - {fileID: 11400000, guid: 2b58f2cfbf623e94b80d38a476539a4c, type: 2}
   - {fileID: 11400000, guid: 930421a582232134fb7a4403e0529fd3, type: 2}
@@ -101,6 +98,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Time: 0.2
+--- !u!114 &114607517423583352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1746907627627218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ce157d87cefa5f41b2f4dcbc5de31b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsBreakable: 1
+  HasKiller: 0
+  KillerObjects:
+  - {fileID: 0}
+  HasDeathDelay: 0
+  DeathDelay: 0
 --- !u!212 &212600191606656960
 SpriteRenderer:
   m_ObjectHideFlags: 1
