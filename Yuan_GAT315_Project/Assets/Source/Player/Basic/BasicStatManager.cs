@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BasicStatManager : MonoBehaviour {
     /*
@@ -25,6 +26,11 @@ public class BasicStatManager : MonoBehaviour {
 
     // Reference to hero controller array 
     public HeroController HeroControl;
+
+
+    public bool destroyOnDeath = false;
+    public UnityEvent DeathEvent;
+
     // Whether the unit is "resting" or "active" 
     public bool isResting { get; set; }
     // Whether unit is dead
@@ -98,9 +104,12 @@ public class BasicStatManager : MonoBehaviour {
 
             e.EffectTick(gameObject);
 
-            // If finished, remove element, otherwise update index
+            // If finished, remove element and shutdown effect, otherwise update index
             if (e.finished)
+            {
+                e.Shutdown(gameObject);
                 _effects.Remove(e);
+            }
             else
                 ++i;
         }
@@ -138,7 +147,17 @@ public class BasicStatManager : MonoBehaviour {
 
         // If ded then die 
         if (_hp <= 0)
+        {
+            if (destroyOnDeath)
+            {
+                Destroy(gameObject);
+            }
+
+            if (DeathEvent != null)
+                DeathEvent.Invoke();
+            
             isDead = true;
+        }
     }
 
     public float GetPP()

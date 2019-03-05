@@ -4,6 +4,7 @@ using UnityEngine;
 
 //Ability Object containing effects on trigger
 public class AbilityObject : MonoBehaviour {
+    [SerializeField] public GameObject[] Affected; // Object types affected by this
 
     [SerializeField] public Effect[] Effects;
     [SerializeField] public bool DetectOverlaps = true;
@@ -51,11 +52,17 @@ public class AbilityObject : MonoBehaviour {
         {
             foreach (Collider2D obj in overlaps)
             {
-                BasicStatManager bs = obj.GetComponent<BasicStatManager>();
-
-                if (bs != null && !_overlapObjects.Contains(bs))
+                foreach (GameObject affectedTags in Affected)
                 {
-                    AffectObject(bs);
+                    if (obj.tag == affectedTags.tag)
+                    {
+                        BasicStatManager bs = obj.GetComponent<BasicStatManager>();
+
+                        if (bs != null && !_overlapObjects.Contains(bs))
+                        {
+                            AffectObject(bs);
+                        }
+                    }
                 }
             }
         }
@@ -64,21 +71,33 @@ public class AbilityObject : MonoBehaviour {
     // Add Object to zone
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Administer effect to all who trigger
-        BasicStatManager bStats = collision.gameObject.GetComponent<BasicStatManager>();
+        foreach (GameObject obj in Affected)
+        {
+            if (obj.tag == collision.tag)
+            {
+                // Administer effect to all who trigger
+                BasicStatManager bStats = collision.gameObject.GetComponent<BasicStatManager>();
 
-        if (bStats != null)
-            AffectObject(bStats);
+                if (bStats != null)
+                    AffectObject(bStats);
+            }
+        }
     }
 
     // Remove object from zone
     private void OnTriggerExit2D(Collider2D collision)
     {
-        BasicStatManager bStats = collision.gameObject.GetComponent<BasicStatManager>();
-
-        if (bStats != null)
+        foreach (GameObject obj in Affected)
         {
-            _overlapObjects.Remove(bStats);
+            if (obj.tag == collision.tag)
+            {
+                BasicStatManager bStats = collision.gameObject.GetComponent<BasicStatManager>();
+
+                if (bStats != null)
+                {
+                    _overlapObjects.Remove(bStats);
+                }
+            }
         }
     }
 
@@ -93,13 +112,19 @@ public class AbilityObject : MonoBehaviour {
                 Effect otherE = otherObject.FindEffect(e);
 
                 if (otherE == null)
+                {
+                    // Set source object
+                    e.source = gameObject;
+
                     otherObject.AddEffect(e);
+                }
                 else
                     otherE.ResetEffect();
 
             }
 
-            _overlapObjects.Add(otherObject);
+            if (!_overlapObjects.Contains(otherObject))
+                _overlapObjects.Add(otherObject);
         }
     }
 }

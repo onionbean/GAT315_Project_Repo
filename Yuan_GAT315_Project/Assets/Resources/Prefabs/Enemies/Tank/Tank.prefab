@@ -9,17 +9,33 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1830780803800388}
+  m_RootGameObject: {fileID: 1679556530947452}
   m_IsPrefabAsset: 1
---- !u!1 &1577417493446208
+--- !u!1 &1008513394344064
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4674399729193360}
-  - component: {fileID: 212706660768658002}
+  - component: {fileID: 4831482456461484}
+  - component: {fileID: 58908630152028984}
+  m_Layer: 10
+  m_Name: BAttackRadius
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1260433318266242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4082474702261694}
+  - component: {fileID: 212072423661610344}
   m_Layer: 0
   m_Name: AbilityLocation
   m_TagString: Untagged
@@ -27,65 +43,78 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1830780803800388
+--- !u!1 &1679556530947452
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4598485800490478}
-  - component: {fileID: 212894227033343210}
-  - component: {fileID: 61171968213559386}
-  - component: {fileID: 114523667817480614}
-  - component: {fileID: 114774461028065980}
-  - component: {fileID: 114575489970981168}
-  - component: {fileID: 114732563107217888}
-  - component: {fileID: 50959925035118086}
-  - component: {fileID: 114751411786335744}
-  - component: {fileID: 58561021279044992}
-  - component: {fileID: 114783793210499520}
-  m_Layer: 0
-  m_Name: Charger
-  m_TagString: Untagged
+  - component: {fileID: 4868423953272942}
+  - component: {fileID: 212608179390701570}
+  - component: {fileID: 61926340812337920}
+  - component: {fileID: 114726594653166344}
+  - component: {fileID: 114500806250206476}
+  - component: {fileID: 114395449003507820}
+  - component: {fileID: 114195538046652248}
+  - component: {fileID: 50080841916042242}
+  - component: {fileID: 114149610189594374}
+  - component: {fileID: 114239588415791810}
+  m_Layer: 9
+  m_Name: Tank
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4598485800490478
+--- !u!4 &4082474702261694
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1830780803800388}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.85, y: 3.04, z: 0.072265625}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4674399729193360}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4674399729193360
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1577417493446208}
+  m_GameObject: {fileID: 1260433318266242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4598485800490478}
+  m_Father: {fileID: 4868423953272942}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50959925035118086
+--- !u!4 &4831482456461484
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1008513394344064}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1875, y: 0.25, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4868423953272942}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4868423953272942
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1679556530947452}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.218, y: 1.38, z: 0.072265625}
+  m_LocalScale: {x: 4, y: 3, z: 1}
+  m_Children:
+  - {fileID: 4082474702261694}
+  - {fileID: 4831482456461484}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50080841916042242
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1830780803800388}
+  m_GameObject: {fileID: 1679556530947452}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -99,12 +128,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58561021279044992
+--- !u!58 &58908630152028984
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1830780803800388}
+  m_GameObject: {fileID: 1008513394344064}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -113,13 +142,13 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 7
---- !u!61 &61171968213559386
+  m_Radius: 2
+--- !u!61 &61926340812337920
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1830780803800388}
+  m_GameObject: {fileID: 1679556530947452}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -130,7 +159,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6, y: 0.6}
+    oldSize: {x: 0.4, y: 0.4}
     newSize: {x: 0.4, y: 0.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -139,32 +168,68 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.4}
   m_EdgeRadius: 0
---- !u!114 &114523667817480614
+--- !u!114 &114149610189594374
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1830780803800388}
+  m_GameObject: {fileID: 1679556530947452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfab805a02761ba4685abfff9a8aad7e, type: 3}
+  m_Script: {fileID: 11500000, guid: b90647fa8202ccf41bca06e2195d3435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 100
-  Armor: 10
-  MaxPP: 0
-  PPRegen: 0
-  HPRegen: 0
-  isHero: 0
-  HeroControl: {fileID: 0}
-  UnitName: Henchman
-  UIPortrait: {fileID: 0}
---- !u!114 &114575489970981168
+  _targeter: {fileID: 114395449003507820}
+  _basicAttackRange: {fileID: 58908630152028984}
+  _a1Range: {fileID: 0}
+  _a2Range: {fileID: 0}
+  _abilityManager: {fileID: 114500806250206476}
+--- !u!114 &114195538046652248
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1830780803800388}
+  m_GameObject: {fileID: 1679556530947452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c85cabe66cc2ef4e8e9b4a3f7e424ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FollowSpeed: 1
+  StoppingDist: 1
+  HasFollowRange: 1
+  FollowRange: 20
+  RotateMoves: 1
+  RotationSpeed: 700
+  CanFollow: 1
+--- !u!114 &114239588415791810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1679556530947452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74cd240908391394b931281a9d3b6472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  MoveTime: 1
+  steps: 32
+  _abilityManager: {fileID: 114500806250206476}
+  _heroControl: {fileID: 0}
+  _targetFollow: {fileID: 114195538046652248}
+--- !u!114 &114395449003507820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1679556530947452}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afe3083307acb144c85f8e57d91f02b1, type: 3}
@@ -172,44 +237,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetTypes:
   - {fileID: 0}
---- !u!114 &114732563107217888
+--- !u!114 &114500806250206476
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1830780803800388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c85cabe66cc2ef4e8e9b4a3f7e424ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FollowSpeed: 2
-  StoppingDist: 1
-  HasFollowRange: 1
-  FollowRange: 20
-  RotateMoves: 1
-  RotationSpeed: 700
-  CanFollow: 1
---- !u!114 &114751411786335744
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1830780803800388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b90647fa8202ccf41bca06e2195d3435, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targeter: {fileID: 114575489970981168}
-  _abilityRange: {fileID: 58561021279044992}
-  _abilityManager: {fileID: 114774461028065980}
---- !u!114 &114774461028065980
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1830780803800388}
+  m_GameObject: {fileID: 1679556530947452}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c7baaa0c461b5448a0dca5053fecfe0, type: 3}
@@ -218,7 +251,7 @@ MonoBehaviour:
   BasicAttack:
     AutomaticUsage: 1
     PPCost: 0
-    Cooldown: 2
+    Cooldown: 1
     IsRestingAbility: 0
     AbilityEvent:
       m_PersistentCalls:
@@ -227,50 +260,14 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     MovementCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: -1.2889112
-        outSlope: -1.2889112
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.22453524
-        value: -0.289406
-        inSlope: -0.1128883
-        outSlope: -0.1128883
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.34989372
-        value: 0.0023252964
-        inSlope: 2.9867837
-        outSlope: 2.9867837
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.07683729
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 1.5346332
-        outSlope: 1.5346332
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     MoveDestination: {x: 0, y: 0, z: 0}
-    MoveDistance: 10
+    MoveDistance: 1
     MoveTime: 1
-    AbilityMovementRef: {fileID: 114783793210499520}
+    AbilityMovementRef: {fileID: 114239588415791810}
     InputAxis: Fire1
     AimMode: {fileID: 11400000, guid: cc745caf12520d84d93826ecc2eb2f8e, type: 2}
     AbilityPrefab: {fileID: 1746907627627218, guid: f44ed0c9faf86b248b5e9b5408eb5232,
@@ -278,7 +275,7 @@ MonoBehaviour:
     isChildObject: 1
     isProjectile: 0
     ProjectileVelocity: 0
-    SpawnTransform: {fileID: 4674399729193360}
+    SpawnTransform: {fileID: 4082474702261694}
     AbilityName: Henchman_BAttack
     UISprite: {fileID: 0}
     BasicStats: {fileID: 0}
@@ -347,35 +344,39 @@ MonoBehaviour:
     CanUse: 1
   RestingAbilities: []
   HeroControl: {fileID: 0}
-  BasicStats: {fileID: 114523667817480614}
---- !u!114 &114783793210499520
+  BasicStats: {fileID: 114726594653166344}
+--- !u!114 &114726594653166344
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1830780803800388}
+  m_GameObject: {fileID: 1679556530947452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74cd240908391394b931281a9d3b6472, type: 3}
+  m_Script: {fileID: 11500000, guid: bfab805a02761ba4685abfff9a8aad7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  MoveTime: 0.75
-  steps: 32
-  _abilityManager: {fileID: 114774461028065980}
-  _heroControl: {fileID: 0}
-  _targetFollow: {fileID: 114732563107217888}
---- !u!212 &212706660768658002
+  MaxHP: 400
+  Armor: 33
+  MaxPP: 0
+  PPRegen: 0
+  HPRegen: 0
+  isHero: 0
+  HeroControl: {fileID: 0}
+  destroyOnDeath: 1
+  DeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  UnitName: Henchman
+  UIPortrait: {fileID: 0}
+--- !u!212 &212072423661610344
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1577417493446208}
+  m_GameObject: {fileID: 1260433318266242}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -416,12 +417,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!212 &212894227033343210
+--- !u!212 &212608179390701570
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1830780803800388}
+  m_GameObject: {fileID: 1679556530947452}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -451,8 +452,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8dc74193144546a499a4ad5d8efcdd94, type: 3}
-  m_Color: {r: 0.9907571, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: dca86d20c7f3b8a448a12447ece94e7e, type: 3}
+  m_Color: {r: 0.7924528, g: 0.11996652, b: 0.018689923, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

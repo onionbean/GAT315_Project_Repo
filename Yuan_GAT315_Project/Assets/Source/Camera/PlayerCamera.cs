@@ -166,4 +166,9 @@ public class PlayerCamera : MonoBehaviour
     {
         _cues.Remove(cue);
     }
+
+    void ShakeCheck()
+    {
+        
+    }
 }

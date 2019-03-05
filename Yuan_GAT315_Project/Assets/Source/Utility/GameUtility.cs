@@ -54,7 +54,7 @@ public class GameUtility : MonoBehaviour
 
     public static float HyperbolicArmor(float armor, float halfPoint)
     {
-        return armor / (halfPoint + armor);
+        return 1 - (armor / (halfPoint + armor));  
     }
 
     public static int ToInt(bool val)

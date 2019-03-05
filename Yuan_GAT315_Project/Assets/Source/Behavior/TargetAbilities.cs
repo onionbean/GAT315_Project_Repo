@@ -51,7 +51,7 @@ public class TargetAbilities : MonoBehaviour {
 
     protected bool CheckRange(float radius, GameObject target)
     {
-        return (Target.TargetDistance(gameObject, target) > radius * Mathf.Min(transform.lossyScale.x, transform.lossyScale.y));
+        return (Target.TargetDistance(gameObject, target) <= radius * Mathf.Min(transform.lossyScale.x, transform.lossyScale.y));
     }
 }
 

@@ -83,7 +83,7 @@ public class FollowTarget : MonoBehaviour
             {
                 // Move
                 Vector2 moveVec = transform.up * FollowSpeed * Time.deltaTime;
-                    rb.MovePosition(rb.position + moveVec);
+                rb.MovePosition(rb.position + moveVec);
 
                 rb.velocity = followDir * FollowSpeed;
 

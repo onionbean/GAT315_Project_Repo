@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae09f874a9517b4296e679f654a1ccf, type: 3}
+  m_Name: SO_EffectDamage_Caster_BAttack
+  m_EditorClassIdentifier: 
+  name: Effect
+  hasDuration: 0
+  duration: 0
+  DamageRange: {x: 0, y: 0}
+  IgnoreArmor: 0
+  UseDeltaTime: 0
+  CritChance: 0
+  CritMultiplier: 2

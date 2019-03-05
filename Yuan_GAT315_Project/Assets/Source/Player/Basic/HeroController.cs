@@ -167,7 +167,7 @@ public class HeroController : MonoBehaviour {
         for (int i = 0; i < Heroes.Count; ++i)
         {
             BasicStatManager hero = Heroes[i];
-            Debug.Log(hero.name + "SWITCHING HERO POSITION ");
+            //Debug.Log(hero.name + "SWITCHING HERO POSITION ");
             hero.gameObject.transform.position = Vector3.Lerp(hero.gameObject.transform.position, _heroPositionSlots[i].position, Time.deltaTime * SwapTime);
         }
     }
@@ -189,11 +189,11 @@ public class HeroController : MonoBehaviour {
             emptySlot.transform.parent = HeroPositionParent.transform;
             // Set their positions
             emptySlot.transform.position = slot;
-            Debug.Log("HERO POSITION PARENT CHILDREN ADDED: " + GameUtility.GetChildren(HeroPositionParent.transform).Length);
+            //Debug.Log("HERO POSITION PARENT CHILDREN ADDED: " + GameUtility.GetChildren(HeroPositionParent.transform).Length);
         }
 
         _heroPositionSlots = GameUtility.GetChildren(HeroPositionParent.transform);
-        Debug.Log("HERO POSITION SLOTS SIZE: " + _heroPositionSlots.Length + ", HERO POSITION PARENT NAME: " + HeroPositionParent.name);
+       // Debug.Log("HERO POSITION SLOTS SIZE: " + _heroPositionSlots.Length + ", HERO POSITION PARENT NAME: " + HeroPositionParent.name);
     }
 
     // Move heroes to their position slots

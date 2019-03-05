@@ -15,6 +15,7 @@ public class Effect : ScriptableObject
     public float duration;              // Duration of effect 
     public bool finished { get; set; }   // If the effect has finished. If so take off list
 
+    public GameObject source { get; set; } // The source object
     /*
     -------------------------------------------------------------------
                                 PRIVATE FIELDS
@@ -55,6 +56,12 @@ public class Effect : ScriptableObject
     }
 
     protected virtual void Affect(GameObject target)
+    {
+        if (target == null)
+            return;
+    }
+
+    public virtual void Shutdown(GameObject target)
     {
         if (target == null)
             return;
